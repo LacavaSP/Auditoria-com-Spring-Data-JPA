@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    
+    <changeSet id="1" author="eduardolacava">
+        
+        <createTable tableName="funcionario"> 
+         
+         <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+              <column name="nome" type="varchar(100)" /> 
+              <column name="setor" type="varchar(100)" /> 
+              <column name="cargo" type="varchar(100)" />
+              <column name="salário" type="int" />
+			  <column name="ativo" type="boolean" />
+			  <column name="dt_alteracao" type="timestamp" remarks="horário da última alteração"></column>
+              <column name="nm_user" type="varchar(100)" remarks="último usuário que realizou modificações aqui"></column>
+        
+        </createTable>
+
+       </changeSet>
+</databaseChangeLog>
